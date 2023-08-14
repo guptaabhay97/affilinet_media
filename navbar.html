@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        $(document).ready(function () {
+           $('.fas').click(function(){
+            $('a').toggleClass('show');
+           }); 
+        });
+    </script>
+</head>
+<style>
+    #navbar{
+        padding: 20px;
+        display: block;
+        position: fixed;
+        width: 100%;
+        transform: top 0.3s;
+        transition: 1s;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .logo{
+        font-size: 1.5rem;
+    }
+    #navbar a{
+        margin-right: 50px;
+        text-decoration: none;
+        border: 1px solid none;
+        justify-content: center;
+        padding: 20px;
+        font-size: 1.5em;
+        color: blueviolet;
+
+        
+    }
+    a:hover{
+        color: aqua;
+        font-size: 1em;
+        background-color: bisque;
+        transition: all 1s;
+        border-radius: 50px; 
+    }
+    .icon i{
+        color: white;
+    }
+    .fas{
+        color: aliceblue;
+        font-size: 30px;
+        line-height: 80px;
+        cursor: pointer;
+        display: none;
+    }
+    @media (max-width:1000px) {
+        a{
+            display: none;
+        }
+    }
+    @media (max-width:1000px) {
+        .logo{
+            font-size: 2rem;
+
+        }
+        .fas{
+            display: block;
+            float: right;
+            margin-right: 80px;
+        }
+        .abc{
+            
+            display: block;
+            width: 80%;
+            height:100%;
+            top:80px;
+            left: 0;
+            text-align: center;
+        }
+        #cls.show{
+            left: 0;
+        }
+    }
+</style>
+<body>
+    <div id="navbar">
+        <label class="logo"> Company Logo</label>
+        <a class="abc active " href="#home">Home</a>
+        <a class="abc" href="#home">Services</a>
+        <a class="abc" href="#home">About</a>
+        <a class="abc" href="#home">content</a>
+        <a class="abc" href="#home">Blog</a>
+
+    <label id="cls">
+        <i class="fas fa-bars">cls</i>
+    </label>
+           
+    </div>
+
+    <div style="padding:100px 15px 2500px; margin-top: 50px; font-size:30px">
+        <p><b>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</b></p>
+        <p>Scroll down this frame to see the effect!</p>
+        <p>Scroll to the top to hide the navbar.</p>
+        <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+             
+</body>
+<script>
+    window.onscroll = function() {scrollFuncation()};
+
+    function scrollFuncation() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("navbar").style.top = "0";
+            document.getElementById("navbar").style.backgroundColor = "#1a2c"
+
+        } else {
+            document.getElementById("navbar").style.top = "0px";
+            document.getElementById("navbar").style.backgroundColor = "transparent"
+        }
+    }
+</script>
+</html>
